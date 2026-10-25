@@ -66,3 +66,15 @@ const menuBtn = document.getElementById('menuBtn');
 const navLinks = document.getElementById('navLinks');
 menuBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
 navLinks.addEventListener('click', () => navLinks.classList.remove('open'));
+
+// "Run the tests" button shows the test report line by line
+const runBtn = document.getElementById('runBtn');
+const report = document.getElementById('report');
+runBtn.addEventListener('click', () => {
+  report.classList.add('open');
+  report.querySelectorAll('.line').forEach((line, i) => {
+    line.classList.remove('show');
+    setTimeout(() => line.classList.add('show'), 350 * (i + 1));
+  });
+  report.scrollIntoView({ behavior: 'smooth', block: 'center' });
+});
