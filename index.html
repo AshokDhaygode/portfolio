@@ -3,64 +3,90 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ashok Dhaygode - QA Automation Engineer / SDET in Pune. Web, Android and iOS test automation.">
+  <meta name="theme-color" content="#000000">
   <title>Ashok Dhaygode | QA Automation Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="glow" id="glow"></div>
 
-  <!-- header -->
-  <header class="container">
-    <h1>Ashok Dhaygode</h1>
-    <p class="subtitle">QA Automation Engineer | SDET - Web, Android & iOS</p>
-    <div class="links">
-      <a href="mailto:ashokdhaygode2001@gmail.com">Email</a>
-      <a href="https://linkedin.com/in/ashok-dhaygode-6b057a237" target="_blank">LinkedIn</a>
-      <span>Pune, Maharashtra, India</span>
+  <nav class="nav">
+    <a href="#home" class="logo">AD.</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu">Menu</button>
+    <ul id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#project">Project</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- hero -->
+  <header class="hero" id="home">
+    <div class="container">
+      <p class="hello">Hi, I'm</p>
+      <h1>Ashok<br>Dhaygode</h1>
+      <p class="role">I'm a <span id="typed"></span><span class="cursor">|</span></p>
+      <p class="intro">I test Web, Android and iOS products and automate the checks so releases stay stable.</p>
+      <div class="buttons">
+        <a class="btn primary" href="#contact">Get in touch</a>
+        <a class="btn" href="https://linkedin.com/in/ashok-dhaygode-6b057a237" target="_blank">LinkedIn</a>
+      </div>
     </div>
   </header>
 
   <main class="container">
 
-    <!-- about -->
-    <section>
-      <h2>About</h2>
-      <p>QA Automation Engineer with 2.6+ years of experience owning product quality across Web, Android and iOS in a B2B insurtech product. I do manual testing, mobile and API automation, SQL validation and CI/CD. I work closely with developers and product managers in Agile/Scrum teams.</p>
+    <!-- stats -->
+    <div class="stats reveal">
+      <div class="stat"><h3><span class="count" data-to="200">0</span>+</h3><p>Automated scenarios run daily</p></div>
+      <div class="stat"><h3><span class="count" data-to="70">0</span>%</h3><p>Less manual regression effort</p></div>
+      <div class="stat"><h3><span class="count" data-to="1000">0</span>+</h3><p>Manual test cases written</p></div>
+      <div class="stat"><h3><span class="count" data-to="100">0</span>+</h3><p>API tests automated</p></div>
+    </div>
+
+    <section id="about" class="reveal">
+      <h2><span>01</span> About</h2>
+      <p>QA Automation Engineer with 2.6+ years of experience owning product quality across Web, Android and iOS in a B2B insurtech product. I do manual testing, mobile and API automation, SQL validation and CI/CD, and I work closely with developers and product managers in Agile/Scrum teams.</p>
+      <p>I have tested 5+ enterprise client implementations (Ola, Zepto, KPIT) with zero production downtime.</p>
     </section>
 
-    <!-- highlights -->
-    <section>
-      <h2>Highlights</h2>
-      <ul>
-        <li>200+ automated mobile scenarios run daily using GitHub Actions and LambdaTest</li>
-        <li>Reduced manual regression effort by 70%</li>
-        <li>500+ manual test cases and 100+ automated API test cases</li>
-        <li>Tested 5+ enterprise client implementations (Ola, Zepto, KPIT) with zero production downtime</li>
-      </ul>
-    </section>
-
-    <!-- experience -->
-    <section>
-      <h2>Experience</h2>
+    <section id="experience" class="reveal">
+      <h2><span>02</span> Experience</h2>
 
       <div class="job">
-        <h3>Quality Engineer - Loop Health</h3>
-        <p class="date">Jul 2024 - Aug 2026 | Pune, India</p>
-        <p class="tech">Java, Selenium, Appium, TestNG, Rest Assured, Postman, MySQL, GitHub Actions, LambdaTest, Jira, TestRail</p>
+        <div class="job-top">
+          <h3>Quality Engineer</h3>
+          <span class="date">Jul 2024 - Aug 2026</span>
+        </div>
+        <p class="company">Loop Health | Pune, India</p>
+        <div class="tags small">
+          <span>Java</span><span>Selenium</span><span>Appium</span><span>TestNG</span><span>Rest Assured</span><span>Postman</span><span>MySQL</span><span>GitHub Actions</span><span>LambdaTest</span><span>Jira</span><span>TestRail</span>
+        </div>
         <ul>
           <li>Wrote 300+ test cases for the Android and iOS app and automated 200+ of them with Java, Appium, Selenium and TestNG.</li>
           <li>Set up a CI/CD pipeline with GitHub Actions and LambdaTest that runs 200+ scenarios daily.</li>
           <li>Added testID / accessibilityLabel attributes in the app repo (50+ merged pull requests) to replace fragile XPath locators.</li>
           <li>Led QA for 5+ B2B client implementations: planning, functional, regression, integration and release testing.</li>
-          <li>Tested the enrollment portal end to end: plan selection, premium calculation, checkout and payment confirmation.</li>
-          <li>Checked premium, payment and claims data across UI, API payloads and SQL.</li>
+          <li>Wrote and executed 1000+ manual test cases using STLC, focusing on high-risk, high-traffic flows.</li>
+          <li><b>Enrollment portal:</b> tested the employee enrollment portal end to end: plan selection, benefits selection, premium calculation, checkout and payment confirmation, covering transactional flows, data validation and edge cases.</li>
+          <li><b>Fintech / insurtech exposure:</b> validated premium calculation, payment confirmation and insurance-claims data flows across UI, API payloads and SQL checks to ensure financial data integrity and accuracy in an enterprise benefits platform.</li>
           <li>Automated 100+ API tests with Postman and Rest Assured.</li>
           <li>Logged and resolved 50+ defects per sprint in Jira and managed 1000+ test cases in TestRail.</li>
         </ul>
       </div>
 
       <div class="job">
-        <h3>QA Engineer Intern - Loop Health</h3>
-        <p class="date">Jan 2024 - Jul 2024 | Pune, India</p>
+        <div class="job-top">
+          <h3>QA Engineer Intern</h3>
+          <span class="date">Jan 2024 - Jul 2024</span>
+        </div>
+        <p class="company">Loop Health | Pune, India</p>
         <ul>
           <li>Wrote 300+ manual test cases and found 50+ critical bugs in a native mobile app.</li>
           <li>Executed 200+ test cases across core modules using STLC.</li>
@@ -69,37 +95,52 @@
       </div>
     </section>
 
-    <!-- skills -->
-    <section>
-      <h2>Skills</h2>
-      <ul>
-        <li><b>Automation:</b> Selenium, Appium, TestNG, Rest Assured, Postman, Playwright (learning)</li>
-        <li><b>Testing:</b> STLC, Agile/Scrum, functional, regression, exploratory, integration</li>
-        <li><b>CI/CD:</b> GitHub Actions, LambdaTest, Linux/Ubuntu</li>
-        <li><b>Languages:</b> Java, SQL (MySQL), HTML, CSS</li>
-        <li><b>Tools:</b> Jira, TestRail, GitHub, VS Code, Maven</li>
-      </ul>
+    <section id="skills" class="reveal">
+      <h2><span>03</span> Skills</h2>
+      <h4>Automation</h4>
+      <div class="tags"><span>Selenium</span><span>Appium</span><span>TestNG</span><span>Rest Assured</span><span>Postman</span><span>Playwright (learning)</span></div>
+      <h4>Testing</h4>
+      <div class="tags"><span>STLC</span><span>Agile/Scrum</span><span>Functional</span><span>Regression</span><span>Exploratory</span><span>Integration</span><span>API Testing</span></div>
+      <h4>CI/CD &amp; Tools</h4>
+      <div class="tags"><span>GitHub Actions</span><span>LambdaTest</span><span>Linux/Ubuntu</span><span>Jira</span><span>TestRail</span><span>Git</span><span>Maven</span></div>
+      <h4>Languages</h4>
+      <div class="tags"><span>Java</span><span>SQL (MySQL)</span><span>HTML</span><span>CSS</span></div>
     </section>
 
-    <!-- project -->
-    <section>
-      <h2>Project</h2>
-      <h3>LinkedIn Content Automation Pipeline</h3>
-      <p>Built a self-hosted n8n workflow (Docker) that generates and publishes scheduled LinkedIn posts using LLM text generation, AI image generation and the LinkedIn APIs.</p>
+    <section id="project" class="reveal">
+      <h2><span>04</span> Project</h2>
+      <div class="card">
+        <h3>LinkedIn Content Automation Pipeline</h3>
+        <p>Built a self-hosted n8n workflow (Docker) that generates and publishes scheduled LinkedIn posts using LLM text generation, AI image generation and the LinkedIn APIs.</p>
+        <div class="tags small"><span>n8n</span><span>Docker</span><span>LLM</span><span>LinkedIn API</span></div>
+      </div>
     </section>
 
-    <!-- education -->
-    <section>
-      <h2>Education & Certification</h2>
-      <p><b>B.E. (Honours) in Data Science</b> - MMCOE, Pune (2022 - 2024)</p>
-      <p><b>ISTQB Certified Tester Foundation Level (CTFL)</b> - Feb 2026</p>
+    <section id="education" class="reveal">
+      <h2><span>05</span> Education &amp; Leadership</h2>
+      <div class="grid">
+        <div class="card"><h3>B.E. in Electronics &amp; Telecommunication (ENTC)</h3><p>Bachelor of Engineering</p></div>
+        <div class="card"><h3>Honours in Data Science</h3><p>Separate 2-year degree | MMCOE, Pune | 2022 - 2024</p></div>
+        <div class="card"><h3>ISTQB Certified Tester (CTFL)</h3><p>Foundation Level | Feb 2026</p></div>
+        <div class="card"><h3>BETA Club: Vice President of Event Management</h3><p>MMCOE, Pune | Oct 2022 - Oct 2023</p></div>
+        <div class="card"><h3>Student Volunteer</h3><p>MMCOE, Pune | Aug 2023 - Sep 2023</p></div>
+        <div class="card"><h3>Cadet, National Cadet Corps (NCC)</h3><p>India | Mar 2015 - Feb 2017</p></div>
+      </div>
+    </section>
+
+    <section id="contact" class="reveal contact">
+      <h2><span>06</span> Contact</h2>
+      <p>Open to QA automation and SDET opportunities. Let's talk.</p>
+      <div class="buttons">
+        <a class="btn primary" href="mailto:ashokdhaygode2001@gmail.com">ashokdhaygode2001@gmail.com</a>
+        <a class="btn" href="https://linkedin.com/in/ashok-dhaygode-6b057a237" target="_blank">LinkedIn</a>
+      </div>
     </section>
 
   </main>
 
-  <footer class="container">
-    <p>Ashok Dhaygode | Pune, India</p>
-  </footer>
+  <footer><p>Ashok Dhaygode | Pune, India</p></footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
